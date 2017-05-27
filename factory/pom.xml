@@ -4,6 +4,11 @@
 	<groupId>com.domi7.jpattern</groupId>
 	<artifactId>factory</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<java.version>1.8</java.version>
+
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -12,4 +17,17 @@
 		</dependency>
 
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
