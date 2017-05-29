@@ -1,7 +1,7 @@
 package com.domi7.dp.strategy2;
 
 /**
- * 冒泡排序
+ * 冒泡排序， 可对比较器按不同的策略进行设置
  * 
  * @author domi7
  * @since 2017年5月29日

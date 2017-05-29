@@ -1,5 +1,11 @@
 package com.domi7.dp.strategy2;
 
+/**
+ * 实现客户端对不同的比较器进行灵活设置
+ * 
+ * @author domi7
+ * @since 2017年5月29日
+ */
 public class Client {
 	public static void main(String[] args) {
 		Cat[] cats = { new Cat(2, 3), new Cat(5, 2), new Cat(4, 4), new Cat(3, 5) };
