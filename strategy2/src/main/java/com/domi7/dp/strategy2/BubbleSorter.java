@@ -1,8 +1,18 @@
 package com.domi7.dp.strategy2;
 
+/**
+ * 冒泡排序
+ * 
+ * @author domi7
+ * @since 2017年5月29日
+ * @param <T>
+ */
 public class BubbleSorter<T> implements Sorter<T> {
 
 	private Comparetor<T> comparetor;
+
+	public BubbleSorter() {
+	}
 
 	public BubbleSorter(Comparetor<T> c) {
 		this.comparetor = c;
@@ -17,6 +27,10 @@ public class BubbleSorter<T> implements Sorter<T> {
 	}
 
 	public T[] sort(T[] arrays) {
+
+		if (null == comparetor)
+			throw new RuntimeException("未设置比较器");
+
 		int len = arrays.length;
 		for (int i = len; i > 0; i--) {
 			for (int j = 0; j < len - 1; j++) {
