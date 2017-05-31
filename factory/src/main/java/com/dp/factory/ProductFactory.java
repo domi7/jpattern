@@ -3,6 +3,12 @@ package com.dp.factory;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * 简单工厂类
+ * 
+ * @author domi7
+ * @since 2017年5月31日
+ */
 public class ProductFactory {
 
 	private static final Properties prop = new Properties();
