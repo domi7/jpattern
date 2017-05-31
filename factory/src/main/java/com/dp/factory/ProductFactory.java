@@ -2,12 +2,9 @@ package com.dp.factory;
 
 import java.io.IOException;
 import java.util.Properties;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class ProductFactory {
 
-	private static final Lock lock = new ReentrantLock();
 	private static final Properties prop = new Properties();
 
 	private static class ProductFactoryHold {
@@ -22,10 +19,7 @@ public class ProductFactory {
 
 		try {
 
-			lock.lock();
-			prop.load(ProductFactory.class
-					.getResourceAsStream("/factory.properties"));
-			lock.unlock();
+			prop.load(ProductFactory.class.getResourceAsStream("/factory.properties"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
