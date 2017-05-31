@@ -18,7 +18,9 @@ public class ObservableTarget extends Observable {
 	public void setContent(String content) {
 
 		this.content = content;
+		// 注意需要设置
 		this.setChanged();
+		// 通知到所有观察者
 		this.notifyObservers(content);
 	}
 
